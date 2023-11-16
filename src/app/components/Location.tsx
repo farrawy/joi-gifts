@@ -122,9 +122,8 @@ const MapComponent: React.FC = () => {
 
           <StandaloneSearchBox
             onLoad={(ref) => {
-              if (ref instanceof StandaloneSearchBox) {
-                searchBoxRef.current = ref;
-              }
+              // @ts-ignore
+              searchBoxRef.current = ref;
             }}
             onPlacesChanged={onPlacesChanged}>
             <OutlinedInput
