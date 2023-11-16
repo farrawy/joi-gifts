@@ -24,41 +24,10 @@ type LatLng = {
   lat: number;
   lng: number;
 };
-export interface User {
-  name: string;
-  date: string;
-  time: string;
-  address: {
-    street: string;
-    city: string;
-    state: string;
-    zip: string;
-    country: string;
-    building: string;
-    floor: string;
-    door: string;
-    instructions?: string;
-  };
-  isCompleted: boolean;
-}
 
 const defaultPosition: LatLng = {
   lat: 24.712729064514974,
   lng: 46.67615242701416,
-};
-
-const addressForm: User = {
-  address: {
-    street: "",
-    city: "",
-    state: "",
-    zip: "",
-    country: "",
-    building: "",
-    floor: "",
-    door: "",
-    instructions: "",
-  },
 };
 
 const MapComponent: React.FC = () => {
