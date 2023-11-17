@@ -89,7 +89,7 @@ const MapComponent: React.FC = () => {
       <LoadScript
         googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
         libraries={["places"]}>
-        <Typography className="font-medium text-gray-300 mb-3">
+        <Typography className="font-medium select-address-text mb-3">
           Please select the address from the map
         </Typography>
         <GoogleMap
