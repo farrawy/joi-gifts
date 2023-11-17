@@ -17,6 +17,7 @@ import {
   OutlinedInput,
   Paper,
   TextField,
+  Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -88,12 +89,12 @@ const MapComponent: React.FC = () => {
       <LoadScript
         googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
         libraries={["places"]}>
-        <p className="font-medium text-gray-500">
+        <Typography className="font-medium text-gray-300 mb-3">
           Please select the address from the map
-        </p>
+        </Typography>
         <GoogleMap
           mapContainerStyle={{
-            height: "400px",
+            height: "500px",
             width: "100%",
             borderRadius: "10px 10px 0 0",
           }}
@@ -130,6 +131,10 @@ const MapComponent: React.FC = () => {
               inputMode="text"
               placeholder="Search"
               className="max-w-[95%] w-full  bg-white left-1/2 transform -translate-x-1/2 top-5"
+              sx={{
+                borderRadius: "10px",
+                boxShadow: "0 0 0 1px rgb(0 0 0 / 10%)",
+              }}
               endAdornment={
                 <IconButton type="submit" aria-label="search">
                   <SearchIcon />
@@ -138,16 +143,17 @@ const MapComponent: React.FC = () => {
             />
           </StandaloneSearchBox>
         </GoogleMap>
-        <Box
+        <Paper
+          sx={{
+            borderRadius: "0 0 10px 10px",
+          }}
           className="
             flex
             justify-center
             items-center
             w-full
             h-28
-            bg-white
             shadow-md
-            rounded-b-lg
             text-gray-500
             font-medium
             p-5
@@ -162,13 +168,13 @@ const MapComponent: React.FC = () => {
                 className=""
               />
               <Box className="ml-4">
-                <h3
+                <Typography
                   className="text-gray-700 
               font-semibold text-lg 
                 ">
                   {state}
-                </h3>
-                <p
+                </Typography>
+                <Typography
                   className="
               text-gray-500
               font-medium
@@ -176,13 +182,13 @@ const MapComponent: React.FC = () => {
               ">
                   PM7G+426, Al Olaya, Riyadh 12214, Saudi Arabia PM7G+426, Al
                   Olaya, Riyadh 12214, Saudi Arabia PM7G+426,
-                </p>
+                </Typography>
               </Box>
             </Box>
           ) : (
-            <p>Please Select an Address</p>
+            <Typography>Please Select an Address</Typography>
           )}
-        </Box>
+        </Paper>
       </LoadScript>
 
       <Box className="flex mt-5 space-x-2 max-w-lg">
@@ -192,13 +198,14 @@ const MapComponent: React.FC = () => {
           label="Building No"
           inputMode="text"
           variant="outlined"
+          className=" text-field"
         />
         <TextField
-          type="text"
           value={floorNo}
           onChange={(e) => setFloorNo(e.target.value)}
           label="Floor No"
           variant="outlined"
+          className=" text-field"
         />
         <TextField
           type="text"
@@ -206,6 +213,7 @@ const MapComponent: React.FC = () => {
           onChange={(e) => setDoorNo(e.target.value)}
           label="Door No"
           variant="outlined"
+          className=" text-field"
         />
       </Box>
       <Box className="flex mt-5 space-x-2 max-w-lg">
@@ -215,13 +223,13 @@ const MapComponent: React.FC = () => {
           value={instructions}
           onChange={(e) => setInstructions(e.target.value)}
           label="Delivery Address Instructions"
-          className="w-full"
+          className="w-full text-field"
           variant="outlined"
         />
       </Box>
 
       <Button
-        className="mt-5 w-full bg-black uppercase font-light text-white text-lg"
+        className="mt-5 w-full uppercase font-medium text-lg btn"
         variant="contained">
         Submit My Address
       </Button>

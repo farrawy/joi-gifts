@@ -6,9 +6,9 @@ import { Box } from "@mui/material";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center bg-white">
+    <main className="flex min-h-screen flex-col items-center ">
       <Navbar />
-      <Box className="p-5 flex flex-col">
+      <Box className="px-3 pb-8 flex flex-col">
         <Message />
         <Location />
       </Box>

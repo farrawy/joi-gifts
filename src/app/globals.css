@@ -6,31 +6,72 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --button-background-rgb: 0, 0, 0;
+  --button-text-rgb: 255, 255, 255;
+  --text-field-rgb: 0, 0, 0;
+  --button-background-hover-rgba: 0, 0, 0, 0.1;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    --button-background-rgb: 255, 255, 255;
+    --button-text-rgb: 0, 0, 0;
+    --text-field-rgb: 255, 255, 255;
+    --button-background-hover-rgba: 255, 255, 255, 0.9;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-end-rgb));
 }
 
-/* Floating Label Styles */
-.input-float .peer:focus ~ label,
-.input-float .peer:not(:placeholder-shown) ~ label {
-  top: -10px;
-  left: 10px;
-  font-size: 0.75rem; /* Tailwind's text-sm */
-  color: ThemeColor; /* Replace with your theme's color */
+.btn {
+  color: rgb(var(--button-text-rgb));
+  background: rgb(var(--button-background-rgb));
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  color: rgb(var(--button-text-rgb));
+  background: rgba(var(--button-background-hover-rgba));
+}
+
+.text-field .MuiOutlinedInput-root fieldset {
+  border-color: rgb(
+    var(--text-field-rgb)
+  ) !important; /* Default border color */
+
+  border-radius: 10px;
+}
+
+.text-field .MuiOutlinedInput-root:hover fieldset {
+  border-color: rgb(
+    var(--text-field-rgb)
+  ) !important; /* Border color on hover */
+}
+
+.text-field
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: rgb(var(--text-field-rgb)); /* Border color on focus */
+}
+
+.text-field .MuiInputLabel-outlined {
+  color: rgb(var(--text-field-rgb)); /* Default label color */
+}
+
+.text-field .MuiInputLabel-outlined.Mui-focused {
+  color: rgb(var(--text-field-rgb)); /* Label color on focus */
+}
+
+.text-field .MuiInputBase-input {
+  color: rgb(var(--text-field-rgb)); /* Input text color */
 }
