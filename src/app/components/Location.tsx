@@ -222,7 +222,7 @@ const MapComponent: React.FC = () => {
         />
       </Box>
 
-      <Whatsapp phoneNumber="+966596007020" />
+      <Whatsapp phoneNumber="+966596007020" message="Interested!" />
 
       <Button
         className="mt-5 w-full uppercase font-medium text-lg btn"
