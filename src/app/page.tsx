@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Message from "./components/Message";
 import Location from "./components/Location";
 import { Box } from "@mui/material";
+import Whatsapp from "./components/Whatsapp";
 
 export default function Home() {
   return (

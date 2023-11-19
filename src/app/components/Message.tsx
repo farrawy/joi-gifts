@@ -14,7 +14,7 @@ const Message = () => {
       <Typography>Hey Ahmed!</Typography>
 
       <Typography className="text-base font-light">
-        Someone is sending you a gift from Joi 🤩🎁.
+        Someone is sending you a gift from Naseem 🤩🎁.
         <br />
         Please confirm your address so we can deliver it as soon as possible.
       </Typography>

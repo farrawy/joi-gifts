@@ -20,6 +20,7 @@ import {
   Typography,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import Whatsapp from "./Whatsapp";
 
 type LatLng = {
   lat: number;
@@ -85,7 +86,7 @@ const MapComponent: React.FC = () => {
   };
 
   return (
-    <Box className="max-w-lg">
+    <Box className="max-w-lg relative">
       <LoadScript
         googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
         libraries={["places"]}>
@@ -127,19 +128,12 @@ const MapComponent: React.FC = () => {
               searchBoxRef.current = ref;
             }}
             onPlacesChanged={onPlacesChanged}>
-            <OutlinedInput
+            <TextField
               inputMode="text"
-              placeholder="Search"
-              className="max-w-[95%] w-full  bg-white left-1/2 transform -translate-x-1/2 top-5"
-              sx={{
-                borderRadius: "10px",
-                boxShadow: "0 0 0 1px rgb(0 0 0 / 10%)",
-              }}
-              endAdornment={
-                <IconButton type="submit" aria-label="search">
-                  <SearchIcon />
-                </IconButton>
-              }
+              variant="outlined"
+              label="Search"
+              placeholder=""
+              className="max-w-[95%] w-full left-1/2 transform -translate-x-1/2 top-5 text-field"
             />
           </StandaloneSearchBox>
         </GoogleMap>
@@ -227,6 +221,8 @@ const MapComponent: React.FC = () => {
           variant="outlined"
         />
       </Box>
+
+      <Whatsapp phoneNumber="+966596007020" />
 
       <Button
         className="mt-5 w-full uppercase font-medium text-lg btn"

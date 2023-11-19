@@ -14,7 +14,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  /* :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
@@ -23,7 +23,22 @@
     --text-field-rgb: 255, 255, 255;
     --button-background-hover-rgba: 255, 255, 255, 0.9;
     --select-text-rgba: 255, 255, 255, 0.8;
+  } */
+
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --button-background-rgb: 0, 0, 0;
+    --button-text-rgb: 255, 255, 255;
+    --text-field-rgb: 0, 0, 0;
+    --button-background-hover-rgba: 0, 0, 0, 0.1;
+    --select-text-rgba: 100, 100, 100, 1;
   }
+}
+
+* {
+  /* border: 1px solid red; */
 }
 
 body {
@@ -46,12 +61,15 @@ body {
   background: rgba(var(--button-background-hover-rgba));
 }
 
-.text-field .MuiOutlinedInput-root fieldset {
-  border-color: rgb(
-    var(--text-field-rgb)
-  ) !important; /* Default border color */
+.text-field .MuiOutlinedInput-root {
+  border-radius: 10px !important;
+  background-color: rgb(
+    var(--background-end-rgb)
+  ) !important; /* Default input background */
+}
 
-  border-radius: 10px;
+.text-field .MuiOutlinedInput-root fieldset {
+  border-color: rgb(var(--text-field-rgb)) !important;
 }
 
 .text-field .MuiOutlinedInput-root:hover fieldset {
