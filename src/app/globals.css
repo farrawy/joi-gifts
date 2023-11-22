@@ -10,11 +10,12 @@
   --button-text-rgb: 255, 255, 255;
   --text-field-rgb: 0, 0, 0;
   --button-background-hover-rgba: 0, 0, 0, 0.1;
+  --button-background-hex: #ffd1c6;
   --select-text-rgba: 100, 100, 100, 1;
 }
 
-@media (prefers-color-scheme: dark) {
-  /* :root {
+/* @media (prefers-color-scheme: dark) { */
+/* :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
@@ -25,7 +26,7 @@
     --select-text-rgba: 255, 255, 255, 0.8;
   } */
 
-  :root {
+/* :root {
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
@@ -35,8 +36,8 @@
     --text-field-rgb: 0, 0, 0;
     --button-background-hover-rgba: 0, 0, 0, 0.8;
     --select-text-rgba: 100, 100, 100, 1;
-  }
-}
+  } */
+/* } */
 
 * {
   /* border: 1px solid red; */
@@ -55,6 +56,7 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-top: 20px;
 }
 
 .btn:hover {

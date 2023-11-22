@@ -368,7 +368,7 @@ const MapComponent: React.FC = () => {
             )}
           </LoadScript>
 
-          <button
+          {/* <button
             onClick={() => setShowInstructions(!showInstructions)}
             className="text-[#444444] font-medium hover:bg-transparent my-3 underline">
             {showInstructions ? "Hide" : "Show"} Delivery Address Instructions
@@ -395,7 +395,7 @@ const MapComponent: React.FC = () => {
               className="w-full text-field"
               variant="outlined"
             />
-          </Box>
+          </Box> */}
 
           <Whatsapp phoneNumber="+966596007020" message="Interested!" />
 
