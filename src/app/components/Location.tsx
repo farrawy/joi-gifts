@@ -370,11 +370,20 @@ const MapComponent: React.FC = () => {
 
           <button
             onClick={() => setShowInstructions(!showInstructions)}
-            className="text-[#444444] font-medium hover:bg-transparent">
+            className="text-[#444444] font-medium hover:bg-transparent my-3 underline">
             {showInstructions ? "Hide" : "Show"} Delivery Address Instructions
+            <Image
+              src={"/chevron-arrow-down.png"}
+              width={20}
+              height={20}
+              alt="chevron arrow down"
+              className={`${
+                showInstructions ? "rotate-180" : ""
+              } inline-block ml-2 `}
+            />
           </button>
           <Box
-            className={` mt-5 mb-2 space-x-2 max-w-lg ${
+            className={` mt-5 mb-2 space-x-2 max-w-lg  ${
               showInstructions ? "flex" : "hidden"
             }`}>
             <TextField
