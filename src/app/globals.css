@@ -50,18 +50,13 @@ body {
 
 .btn {
   color: rgb(var(--button-text-rgb));
-  background: var(--button-background-hex);
+  background: rgb(var(--button-background-rgb));
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   margin-top: 20px;
-}
-
-.btn:hover {
-  color: rgb(var(--button-text-rgb));
-  background: var(--button-background-hex);
 }
 
 .text-field .MuiOutlinedInput-root {
