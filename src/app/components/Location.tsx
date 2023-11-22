@@ -333,7 +333,7 @@ const MapComponent: React.FC = () => {
             justify-center
             items-center
             w-full
-            h-20
+            h-auto
             shadow-md
             text-gray-500
             font-medium
@@ -396,8 +396,6 @@ const MapComponent: React.FC = () => {
               variant="outlined"
             />
           </Box> */}
-
-          <Whatsapp phoneNumber="+966596007020" message="Interested!" />
 
           <button className="mt-0 w-full uppercase font-medium text-lg btn">
             Submit My Address
