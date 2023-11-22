@@ -9,22 +9,27 @@ const Message = () => {
         flex
         flex-col
         justify-center
-        my-10
     ">
       <Typography>Hey Ahmed!</Typography>
 
       <Typography className="text-base font-light">
-        Someone is sending you a gift from Naseem 🤩🎁.
-        <br />
-        Please confirm your address so we can deliver it as soon as possible.
+        Someone is sending you a gift from{" "}
+        <span
+          className="font-medium text-[#ffd1c6]"
+          style={{
+            textShadow: "2px 2px 4px #ffd1c666",
+          }}>
+          Naseem🤩🎁
+        </span>
+        . Please confirm your address below.
       </Typography>
 
-      <Typography className="text-base font-light">
-        Order delivery date and time:
-        <br />
-        <strong className="font-semibold">
-          20 November 2023, 17:00 - 21:00
-        </strong>
+      <Typography className="font-bold mb-2">
+        Delivery:
+        <span className="font-semibold text-[#ffd1c6]">
+          {" "}
+          Nov 20, 17:00 - 21:00
+        </span>
       </Typography>
     </Box>
   );

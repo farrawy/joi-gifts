@@ -30,9 +30,10 @@
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
     --button-background-rgb: 0, 0, 0;
+    --button-background-hex: #ffd1c6;
     --button-text-rgb: 255, 255, 255;
     --text-field-rgb: 0, 0, 0;
-    --button-background-hover-rgba: 0, 0, 0, 0.1;
+    --button-background-hover-rgba: 0, 0, 0, 0.8;
     --select-text-rgba: 100, 100, 100, 1;
   }
 }
@@ -48,7 +49,7 @@ body {
 
 .btn {
   color: rgb(var(--button-text-rgb));
-  background: rgb(var(--button-background-rgb));
+  background: var(--button-background-hex);
   border-radius: 0.25rem;
   padding: 0.5rem 1rem;
   border: none;
@@ -58,7 +59,7 @@ body {
 
 .btn:hover {
   color: rgb(var(--button-text-rgb));
-  background: rgba(var(--button-background-hover-rgba));
+  background: var(--button-background-hex);
 }
 
 .text-field .MuiOutlinedInput-root {
