@@ -368,11 +368,11 @@ const MapComponent: React.FC = () => {
             )}
           </LoadScript>
 
-          <Button
+          <button
             onClick={() => setShowInstructions(!showInstructions)}
-            className="text-[#444] font-medium hover:bg-transparent">
+            className="text-[#444444] font-medium hover:bg-transparent">
             {showInstructions ? "Hide" : "Show"} Delivery Address Instructions
-          </Button>
+          </button>
           <Box
             className={` mt-5 mb-2 space-x-2 max-w-lg ${
               showInstructions ? "flex" : "hidden"
@@ -390,11 +390,9 @@ const MapComponent: React.FC = () => {
 
           <Whatsapp phoneNumber="+966596007020" message="Interested!" />
 
-          <Button
-            className="mt-0 w-full uppercase font-medium text-lg btn"
-            variant="contained">
+          <button className="mt-0 w-full uppercase font-medium text-lg btn">
             Submit My Address
-          </Button>
+          </button>
         </>
       )}
     </Box>
